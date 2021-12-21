@@ -262,7 +262,7 @@ static int __maybe_unused tsn_mcdma_probe(struct platform_device *pdev,
 
 	lp->mcdma_regs = devm_ioremap_resource(&pdev->dev, &dmares);
 	if (IS_ERR(lp->mcdma_regs)) {
-		dev_err(&pdev->dev, "iormeap failed for the dma\n");
+		dev_err(&pdev->dev, "ioremap failed for the dma\n");
 		ret = PTR_ERR(lp->mcdma_regs);
 		return ret;
 	}
